@@ -1,0 +1,12 @@
+# created by virtualenv automatically
+main.py
+.idea/Data Structures.iml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+
+Lib
+Scripts
+pyvenv.cfg
+

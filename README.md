@@ -5,8 +5,8 @@
 1. Binary Search
 2. Sorting Algorithms:
     a. Bubble sort
-    b. Insertion Sort
-    c. Merge Sort
-    d. Selection Sort
+    b. Insertion sort
+    c. Merge sort
+    d. Selection sort
     e. Quick sort
     

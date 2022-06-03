@@ -94,11 +94,29 @@ class LinkedList:
         else:
             n.ref = n.ref.ref
 
+    def reverse_iterative(self):
+        prev = None
+        curr = self.head
+        while curr:
+            nxt = curr.ref
+            curr.ref = prev
+            prev = curr
+            curr = nxt
+        self.head = prev
+
+    def reverse_recursive(self, head):
+        if head is None or head.ref is None:
+            return head
+        curr = self.reverse_recursive(head.ref)
+        head.ref.ref = head
+        head.ref = None
+        return curr
+
 
 if __name__ == '__main__':
     LL = LinkedList()
-    LL.add_begin(2)
     LL.add_begin(5)
+    LL.add_begin(2)
     LL.add_begin(1)
     LL.add_end(10)
     LL.add_end(15)
@@ -109,4 +127,10 @@ if __name__ == '__main__':
     LL.delete_end()
     LL.delete_given(15)
     LL.delete_given(1)
+    LL.print_list()
+    print()
+    LL.reverse_iterative()
+    LL.print_list()
+    print()
+    LL.head = LL.reverse_recursive(LL.head)
     LL.print_list()
